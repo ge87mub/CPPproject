@@ -1,9 +1,18 @@
-# CPP_SEMESTER_G05
+CPP Mühle Project
 
-Gruppenaufteilung:
+This is my implementation of the classic board game *Mühle* (Nine Men's Morris) in C++.
 
-GUI: Shihang, with the following information for my recruiters: the files full written and responsible by me are the files concerning gui, serverDialog, disconnectDialog. However, i have included the entire project in order for the code to be demonstrated.
-  
+## How to Run
+- the project was created using Qt creator version 13.0.0
+## Features
+- Game logic for two players
+- Valid move detection
+- Mill formation and piece removal
+- Win condition checking
 
-Netzwerk: Mark
-Spielelogik: Felix
+-Clean version of a university team project
+-The following files was written and documented by me: gui.cpp, gui.hpp, serverdialog.cpp, serverdialog.hpp, disconnectdialog.cpp, disconnectdialog.h, and all of the .ui files.
+-Original collaborators' data removed for privacy.
+
+-Feel free to explore or fork.
+-Contact: shawn.li@tum.de
