@@ -1,0 +1,37 @@
+default:
+  image: "gitlab.lrz.de:5005/tueisec-labs/cpp_orga/cpp_orga-project-build-runner:v2025.3"
+
+stages:
+  - build
+  - docs
+
+build:
+  stage: build
+  script:
+    - mkdir -p build
+    - cd build
+    - qmake ../muehle/muehle.pro
+    - make
+
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /<Template Commit>/i
+
+  artifacts:
+    paths:
+      - build/*
+
+docs:
+  stage: docs
+  script:
+    - mkdir -p docs
+    - cd docs
+    - doxygen Doxyfile
+
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /<Template Commit>/i
+
+  artifacts:
+    paths:
+      - docs/*
